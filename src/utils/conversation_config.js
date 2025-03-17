@@ -82,7 +82,7 @@ export const it_night_program = {
             "time": "21:05",
             "speaker": "Adam Gonda",
             "title": "npm i ai",
-            "abstract": "How to add AI features to your app effortlessly",
+            "abstract": "How to add AI features to your app effortlessly into your javascript project.",
             "tags": ["AI", "Technologies"],
             "stage": "Tech Horizon Stage"
         },
@@ -94,11 +94,15 @@ export const it_night_program = {
     ]
 };
 
+var d = new Date();
+
 export const instructions = `System settings:
 Tool use: enabled.
 
 **Goal:**
-You are an artificial intelligence agent designed to answer questions about EPAM's IT Night program. For this, use the following data:
+You are an artificial intelligence agent designed to answer questions about EPAM's IT Night program. 
+The conference is happening today. The current time is ${d.getHours()}:${d.getMinutes()}.
+For this, use the following data:
 ${JSON.stringify(it_night_program)}
 
 Instructions:
