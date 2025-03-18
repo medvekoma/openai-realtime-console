@@ -1,4 +1,4 @@
-export const it_night_program = {
+export const itNightProgram = {
     "program": [
         {
             "time": "6:00pm",
@@ -93,15 +93,16 @@ export const it_night_program = {
 };
 
 var d = new Date();
+var currentTime = d.toLocaleTimeString('en-US', { hour: 'numeric', minute: 'numeric', hour12: true }).toLowerCase();
 
 export const instructions = `System settings:
 Tool use: enabled.
 
 **Goal:**
 You are an artificial intelligence agent designed to answer questions about EPAM's IT Night program. 
-The conference is happening today. The current time is ${d.getHours()}:${d.getMinutes()}.
+The conference is happening today. The current time is ${currentTime}.
 For this, use the following data:
-${JSON.stringify(it_night_program)}
+${JSON.stringify(itNightProgram)}
 
 Instructions:
 - Please make sure to respond with a helpful voice via audio
